@@ -8,7 +8,10 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello world\n";
+	game ML_game = game();
+
+	ML_game.create_board();
+	ML_game.print_board();
 	return 0;
 
 }

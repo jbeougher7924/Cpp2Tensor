@@ -13,6 +13,13 @@ game::~game()
 
 void game::create_board()
 {
+	for (int row = 0; row < ROW_COUNT; row++)
+	{
+		for (int column = 0; column < COLUMN_COUNT; column++)
+		{
+			board[row][column] = 0;
+		}
+	}
 }
 
 void game::drop_piece(int board, int row, int col, int piece)
@@ -29,8 +36,16 @@ int game::get_next_open_row(int board, int col)
 	return 0;
 }
 
-void game::print_board(int board)
+void game::print_board()
 {
+	for (int row = 0; row < ROW_COUNT; row++)
+	{
+		for (int column = 0; column < COLUMN_COUNT; column++)
+		{
+			cout <<  board[row][column] << " ";
+		}
+		cout << endl;
+	}
 }
 
 bool game::winning_move(int board, int piece)
