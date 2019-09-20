@@ -2,6 +2,7 @@
 #include <iostream>
 #include <array>
 #include <time.h>
+#include <cmath>
 
 
 #define ROW_COUNT  6
